@@ -9,6 +9,8 @@ window.addEventListener('load', () => {
   tigre.style.display = "block";
   btn.style.display = "block";
   regle.style.display = "block";
+
+  border();
 })
 
 btn.addEventListener('click', () => {
@@ -64,4 +66,15 @@ function nones() {
   btn.style.display = "block";
   jeux.style.display = "none";
   menu.style.display = "none";
+}
+
+function border () {
+  btn.style.transition = "ease-in 1s";
+  btn.style.border = "";
+  
+  menu.style.transition = "ease-in 1s";
+  menu.style.border = "";
+
+  regle.style.transition = "ease-in 1s";
+  regle.style.border = "";
 }

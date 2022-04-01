@@ -34,7 +34,7 @@ body {
   top: 85%;
   left: 35%;
   display: none;
-  background-color: darkslategrey;
+  background-color: rgb(25, 25, 25);
   outline: none;
   border: none;
   border-radius: 10px;
@@ -48,7 +48,7 @@ body {
   left: 35%;
   position: absolute;
   display: none;
-  background-color: darkslategrey;
+  background-color: rgb(25, 25, 25);
   outline: none;
   border: none;
   border-radius: 10px;
@@ -59,7 +59,7 @@ body {
   position: absolute;
   width: 10%;
   height: 5%;
-  background-color: darkslategrey;
+  background-color: rgb(25, 25, 25);
   top: 0;
   left: 0;
   margin: 5vh;
@@ -72,13 +72,13 @@ body {
 }
 .play:hover {
   transition: ease-in .5s;
-  box-shadow: inset 0px 0px 10px 10px white;
+  box-shadow: inset 0px 0px 10px 10px black;
 }
 .btnregle:hover {
   transition: ease-in .5s;
-  box-shadow: inset 0px 0px 10px 10px white;
+  box-shadow: inset 0px 0px 10px 10px black;
 }
 .menu:hover {
   transition: ease-in .5s;
-  box-shadow: inset 0px 0px 10px 10px white;
+  box-shadow: inset 0px 0px 10px 10px black;
 }
