@@ -20,6 +20,7 @@ let arrayBatonSave = [baton1, baton2, baton3, baton4, baton5, baton6, baton7, ba
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
+const btnReset = document.querySelector('.btnReset');
 
 /* Enlever un baton */
 btn1.addEventListener('click', function(){
@@ -87,8 +88,23 @@ function getRandomArbitrary(min, max) {
 function win() {
     console.log("win");
     /* Message de win */
+    btnReset.style.display = "block";
+}
+if(arrayBaton == []){
+    console.log("lose");
+    /* Message de lose */
     /* Btn pour reset */
+}
+
+btnReset.addEventListener("click", function(){
     arrayBaton = arrayBatonSave;
+
+    btnReset.style.display = "none";
+
+    btn1.removeAttribute("disabled","");
+    btn2.removeAttribute("disabled","");
+    btn3.removeAttribute("disabled","");
+
     baton1.style.opacity = "100";
     baton2.style.opacity = "100";
     baton3.style.opacity = "100";
@@ -104,9 +120,4 @@ function win() {
     baton13.style.opacity = "100";
     baton14.style.opacity = "100";
     baton15.style.opacity = "100";
-}
-if(arrayBaton == []){
-    console.log("lose");
-    /* Message de lose */
-    /* Btn pour reset */
-}
+})
