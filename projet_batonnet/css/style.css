@@ -82,6 +82,48 @@ h2 {
 }
 /* fin de titre et h2 */
 
+/* div win / loose */
+.wine {
+  position: absolute;
+  z-index: 5;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: darkgray;
+  border-radius: 10px;
+  box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
+}
+.wine ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 85%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+.wine ul li {
+  position: relative;
+  z-index: 6;
+  width: 5vh;
+  height: .5vh;
+  background: black;
+  margin: .2vh;
+  border-radius: 10px;
+  transition: ease .2s;
+}
+.ul:hover .bar1 {
+  transform: rotate(60deg);
+}
+.ul:hover .bar3 {
+  transform: rotate(-60deg);
+}
+.ul:hover .bar2 {
+  opacity: 0;
+}
+/* fin de div win / loose */
+
 /* btn première page*/
 .play {
   width: 30%;

@@ -26,6 +26,9 @@ let flame = document.querySelectorAll('.flame_container');
 /* titre */
 let titre = document.querySelector('.titre');
 
+/* win */
+let wine = document.querySelector('.wine');
+
 /* au chargement de la page */
 window.addEventListener('load', () => {
 
@@ -37,6 +40,8 @@ window.addEventListener('load', () => {
 
   regles.style.display = "none";
   regles.style.transition = "ease-in 1s";
+
+  wine.style.display = "none";
 
   /* border(); */ //test . . . (1)
 })
@@ -205,7 +210,7 @@ move();
 /* fin de animation course poursuite */
 
 /* . . . */
-let nbrbis = 0;
+/* let nbrbis = 0;
 flame.addEventListener('click', () => {
   flame.forEach(element => {
     let fire = element;
@@ -220,5 +225,5 @@ flame.addEventListener('click', () => {
       break;
     }
   });
-})
+}) */
 /* . . . */

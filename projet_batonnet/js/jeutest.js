@@ -15,6 +15,7 @@ const baton14 = document.querySelector('.baton14');
 const baton15 = document.querySelector('.baton15');
 
 let arrayBaton = [baton1, baton2, baton3, baton4, baton5, baton6, baton7, baton8, baton9, baton10, baton11, baton12, baton13, baton14, baton15];
+let arrayBatonleave = [];
 let arrayBatonSave = [baton1, baton2, baton3, baton4, baton5, baton6, baton7, baton8, baton9, baton10, baton11, baton12, baton13, baton14, baton15];
 
 const btn1 = document.querySelector('.btn1');
@@ -24,7 +25,7 @@ const btnReset = document.querySelector('.btnReset');
 
 /* Enlever un baton */
 btn1.addEventListener('click', function(){
-    arrayBaton[0].style.opacity = "0";
+    arrayBatonleave.push(arrayBaton.indexOf[0]);
     arrayBaton.splice(0,1);
     if (arrayBaton.length == 1){
         win();
@@ -34,11 +35,13 @@ btn1.addEventListener('click', function(){
     btn1.setAttribute("disabled","");
     btn2.setAttribute("disabled","");
     btn3.setAttribute("disabled","");
+    console.log(arrayBaton[0]);
+    console.log(arrayBatonleave[0]);
 })
 /* Enlever deux baton */
 btn2.addEventListener('click', function(){
-    arrayBaton[0].style.opacity = "0";
-    arrayBaton[1].style.opacity = "0";
+    arrayBatonleave.push(arrayBaton.indexOf[0]);
+    arrayBatonleave.push(arrayBaton.indexOf[1]);
     arrayBaton.splice(0,2);
     if (arrayBaton.length == 1){
         win();
@@ -48,12 +51,14 @@ btn2.addEventListener('click', function(){
     btn1.setAttribute("disabled","");
     btn2.setAttribute("disabled","");
     btn3.setAttribute("disabled","");
+    console.log(arrayBaton[0]);
+    console.log(arrayBatonleave[0]);
 })
 /* Enlever trois baton */
 btn3.addEventListener('click', function(){
-    arrayBaton[0].style.opacity = "0";
-    arrayBaton[1].style.opacity = "0";
-    arrayBaton[2].style.opacity = "0";
+    arrayBatonleave.push(arrayBaton.indexOf[0]);
+    arrayBatonleave.push(arrayBaton.indexOf[1]);
+    arrayBatonleave.push(arrayBaton.indexOf[2]);
     arrayBaton.splice(0,3);
     if (arrayBaton.length == 1){
         win();
@@ -63,23 +68,32 @@ btn3.addEventListener('click', function(){
     btn1.setAttribute("disabled","");
     btn2.setAttribute("disabled","");
     btn3.setAttribute("disabled","");
+    console.log(arrayBaton[0]);
+    console.log(arrayBatonleave[0]);
 })
 
+let lo = 0;
 /* Ordinateur */
 function ordi() {
-    
+    lo = 0;
+    if (arrayBaton.length >= 1) {
         let randomBaton = getRandomArbitrary(0, 3)
         console.log(randomBaton);
         
         for (let i = 0; i < randomBaton; i++) {
-            arrayBaton[0].style.opacity = "0";
+            arrayBatonleave.push(arrayBaton.indexOf[0]);
             arrayBaton.splice(0,1);
         }
 
         btn1.removeAttribute("disabled","");
         btn2.removeAttribute("disabled","");
         btn3.removeAttribute("disabled","");
-    
+    } else {
+        lo = 1;
+        return lo;
+    }
+    console.log(arrayBaton[0]);
+    console.log(arrayBatonleave[0]);
 }
 
 
@@ -92,14 +106,19 @@ function win() {
     console.log("win");
     /* Message de win */
     /* btnReset.style.display = "block"; */
-    wine.style.display = "block";
-    reset();
-}
-if(arrayBaton.length <= 0){
-    console.log("lose");
-    console.log("lose");
-    /* Message de lose */
-    /* Btn pour reset */
+    if(lo == 1){
+        console.log("lose");
+        console.log("lose");
+        /* Message de lose */
+        /* Btn pour reset */
+        lo = 0;
+        reset();
+        return lo;
+    } else {
+        wine.style.display = "block";
+        reset();
+    }
+
 }
 
 btnReset.addEventListener("click", function(){
@@ -114,6 +133,12 @@ function reset() {
     btn1.removeAttribute("disabled","");
     btn2.removeAttribute("disabled","");
     btn3.removeAttribute("disabled","");
+
+    for (let i = 0; i < arrayBatonleave.length; i++) {
+        const element = arrayBatonleave[i];
+        arrayBaton.push(element);
+        
+    }
 
     baton1.style.opacity = "100";
     baton2.style.opacity = "100";
