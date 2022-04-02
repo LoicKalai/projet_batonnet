@@ -5,7 +5,8 @@ Célèbre jeu du bâtonnet, le dernier à tirer le bâton restant sera perdant!
 Ce projet est réalisé par un groupe de trois personnes
 
 ## Nos github
-https://github.com/anthonyr-14051997
+https://github.com/anthonyr-14051997  
+
 https://github.com/LoicKalai
 
 ## Technos
