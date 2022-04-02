@@ -6,6 +6,7 @@ Ce projet est réalisé par un groupe de trois personnes
 
 ## Nos github
 https://github.com/anthonyr-14051997
+https://github.com/LoicKalai
 
 ## Technos
 ![Logo github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
