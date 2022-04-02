@@ -1,26 +1,35 @@
 
 let btn = document.querySelector('.play');
-let menu = document.querySelector('.menu');
 let btnregle = document.querySelector('.btnregle');
+
+let menu = document.querySelector('.menu');
+let menu2 = document.querySelector('.menu2');
+
 let regles = document.querySelector('.regles');
 let jeux = document.querySelector('.jeux');
+let acc = document.querySelector('.acc');
 
-let tigre = document.querySelector('.tigre');
 let fouras = document.querySelector('.fouras');
+let back = document.querySelector('.back');
 let fouras2 = document.querySelector('.fouras2');
 let partout = document.querySelector('.partout');
-let tigre2 = document.querySelector('.tigre2');
+let tigre = document.querySelector('.tigre');
 
 let feu = document.querySelector('.feu');
-let flame = document.querySelectorAll('.flame');
+let flame = document.querySelectorAll('.flame_container');
 
 let titre = document.querySelector('.titre');
 
 window.addEventListener('load', () => {
-  tigre.style.display = "block";
-  btn.style.display = "block";
-  btnregle.style.display = "block";
-  titre.style.display = "block";
+
+  acc.style.display ="block";
+  acc.style.transition = "ease-in 1s";
+
+  jeux.style.display = "none";
+  jeux.style.transition = "ease-in 1s";
+
+  regles.style.display = "none";
+  regles.style.transition = "ease-in 1s";
 
   /* border(); */
 })
@@ -28,44 +37,26 @@ window.addEventListener('load', () => {
 /* btn jouez */
 
 btn.addEventListener('click', () => {
-  tigre.style.transition = "ease-in 1s";
-  tigre.style.transform = "scale(5)";
-  tigre.style.opacity = "0";
 
-  btn.style.transition = "ease-in 1s";
-  
-  btn.style.opacity = "0";
+  acc.style.transform = "scale(5)";
+  acc.style.opacity = "0";
 
-  btnregle.style.transition = "ease-in 1s";
-  
-  btnregle.style.opacity = "0";
+  jeux.style.transform = "scale(1)";
+  jeux.style.opacity = "1";
 
-  titre.style.transition = "ease-in 1s";
- 
-  titre.style.opacity = "0";
- 
-  menu.style.transition = "ease-out 1s";
-  
-  menu.style.opacity = "1";
-
-  setTimeout(none, 2000);
-
-  move();
+  setTimeout(none, 1000);
 })
 
 function none() {
-  tigre.style.display = "none";
-  btn.style.display = "none";
-  btnregle.style.display = "none";
+  
+  acc.style.display = "none";
+
   jeux.style.display = "block";
-  menu.style.display = "block";
-  titre.style.display = "none";
+
   feu.style.display = "block";
   feu.style.display = "flex";
+  feu.style.justifyContent = "space-between";
 
-  fouras2.style.display = "block";
-  partout.style.display = "block";
-  tigre2.style.display = "block";
 }
 
 /* fin de jouez */
@@ -73,50 +64,25 @@ function none() {
 /* btn accueil */
 
 menu.addEventListener('click', () => {
-  
-  tigre.style.transition = "ease-in 1s";
-  tigre.style.transform = "scale(1)";
-  tigre.style.opacity = "1";
-  
-  btn.style.transition = "ease-in 1s";
-  
-  btn.style.opacity = "1";
 
-  btnregle.style.transition = "ease-in 1s";
-  
-  btnregle.style.opacity = "1";
-
-  titre.style.transition = "ease-in 1s";
-  
-  titre.style.opacity = "1";
-
-  menu.style.transition = "ease-in 1s";
-  
-  menu.style.opacity = "0";
-
-  jeux.style.transition = "ease-in 1s";
-  
+  jeux.style.transform = "scale(5)";
   jeux.style.opacity = "0";
 
+  acc.style.transform = "scale(1)";
+  acc.style.opacity = "1";
+
   setTimeout(nones, 2000);
+
 })
 
 function nones() {
-  tigre.style.display = "block";
-  btn.style.display = "block";
-  btnregle.style.display = "block";
-  
-  titre.style.display = "block";
+
+  feu.style.display = "block";
 
   jeux.style.display = "none";
-  menu.style.display = "none";
-  feu.style.display = "none";
-  feu.style.display = "block";
-  feu.style.display = "none";
 
-  fouras2.style.display = "none";
-  partout.style.display = "none";
-  tigre2.style.display = "none";
+  acc.style.display = "block";
+
 }
 
 /* fin de accueil */
@@ -125,100 +91,86 @@ function nones() {
 
 btnregle.addEventListener('click', () => {
 
-  tigre.style.transition = "ease-in 1s";
-  tigre.style.transform = "scale(5)";
-  tigre.style.opacity = "0";
+  acc.style.transform = "scale(5)";
+  acc.style.opacity = "0";
 
-  btn.style.transition = "ease-in 1s";
-  
-  btn.style.opacity = "0";
-
-  btnregle.style.transition = "ease-in 1s";
-  
-  btnregle.style.opacity = "0";
-
-  titre.style.transition = "ease-in 1s";
-  
-  titre.style.opacity = "0";
- 
-  menu.style.transition = "ease-out 1s";
-  
-  menu.style.opacity = "1";
-
-  regles.style.transition = "ease-out 1s";
-  
+  regles.style.transform = "scale(1)";
   regles.style.opacity = "1";
 
   setTimeout(nonese, 2000);
 })
 
 function nonese() {
-  menu.style.display = "block";
-  regles.style.display = "block";
-  fouras.style.display = "block";
 
-  tigre.style.display = "none";
-  btn.style.display = "none";
-  btnregle.style.display = "none";
-  
-  titre.style.display = "none";
+  acc.style.display = "none";
+
+  regles.style.display = "block";
+
+}
+
+menu2.addEventListener('click', () => {
+
+  regles.style.transform = "scale(5)";
+  regles.style.opacity = "0";
+
+  acc.style.transform = "scale(1)";
+  acc.style.opacity = "1";
+
+  setTimeout(noneses, 2000);
+})
+
+function noneses() {
+
+  regles.style.display = "none";
+
+  acc.style.display = "block";
+
 }
 
 /* fin de regles */
 
 function border () {
-  btn.style.transition = "ease-in 1s";
+
   btn.style.border = "";
   
-  menu.style.transition = "ease-in 1s";
   menu.style.border = "";
 
-  btnregle.style.transition = "ease-in 1s";
   btnregle.style.border = "";
+
 }
 
 let nbr = 0;
-fouras.addEventListener('mouseover', () => {
+fouras2.addEventListener('mouseover', () => {
   switch (nbr) {
     case 0:
-      fouras.style.transition = "ease-in .2s";
-      fouras.style.top = "2vh";
-      fouras.style.left = "35%";
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "2vh";
+      fouras2.style.left = "35%";
       nbr++;
     break;
     case 1:
-      fouras.style.transition = "ease-in .2s";
-      fouras.style.top = "40vh";
-      fouras.style.left = "5%";
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "40vh";
+      fouras2.style.left = "5%";
       nbr++;
     break;
     case 2:
-      fouras.style.transition = "ease-in .2s";
-      fouras.style.top = "80vh";
-      fouras.style.left = "35%";
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "80vh";
+      fouras2.style.left = "35%";
       nbr++;
     break;
     case 3:
-      fouras.style.transition = "ease-in .2s";
-      fouras.style.top = "40vh";
-      fouras.style.left = "70%";
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "40vh";
+      fouras2.style.left = "70%";
       nbr = 0;
     break;
   }
 })
 
-function move() {
-
-  setTimeout(fourasmove, 3000);
-
-  setTimeout(partoutmove, 1000);
-
-  setTimeout(tigremove, 1000);
-  
-}
-
 function fourasmove() {
-  fouras2.classList.add('anim');
+  fouras.classList.add('anim');
   
 }
 
@@ -228,19 +180,32 @@ function partoutmove() {
 }
 
 function tigremove() {
-  tigre2.classList.add('anim2');
+  tigre.classList.add('anim2');
 }
 
+function move() {
+
+  setTimeout(fourasmove, 2500);
+
+  setTimeout(partoutmove, 1000);
+
+  setTimeout(tigremove, 1000);
+  
+}
+
+move();
+
 let nbrbis = 0;
-flame.addEventListener('click', function (element) {
+flame.addEventListener('click', () => {
   flame.forEach(element => {
+    let fire = element;
     switch(nbrbis) {
       case 0:
-        element.style.display = "none";
+        fire.style.opacity = "0";
         nbrbis++;
       break;
       case 1:
-        element.style.display = "block";
+        fire.style.opacity = "1";
         nbrbis = 0;
       break;
     }
