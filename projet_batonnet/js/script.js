@@ -29,6 +29,9 @@ let titre = document.querySelector('.titre');
 /* win */
 let wine = document.querySelector('.wine');
 
+/* Musique */
+let musique = document.querySelector('audio');
+
 /* au chargement de la page */
 window.addEventListener('load', () => {
 
@@ -48,6 +51,8 @@ window.addEventListener('load', () => {
 
 /* btn jouez */
 btn.addEventListener('click', () => {
+
+  musique.play();
 
   acc.style.transform = "scale(5)";
   acc.style.opacity = "0";
