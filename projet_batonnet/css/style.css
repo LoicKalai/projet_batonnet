@@ -3,6 +3,12 @@
 }
 body {
   overflow: hidden;
+  font-family: "Norse", sans-serif;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("../assets/font/Norse.otf");
 }
 
 /* block centrale */
