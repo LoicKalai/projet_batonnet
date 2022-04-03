@@ -67,7 +67,7 @@ btn3.addEventListener('click', function(){
 
 /* Ordinateur */
 function ordi() {
-    
+    console.log(arrayBaton);
         let randomBaton = getRandomArbitrary(0, 3)
         console.log(randomBaton);
         
@@ -79,6 +79,7 @@ function ordi() {
         btn1.removeAttribute("disabled","");
         btn2.removeAttribute("disabled","");
         btn3.removeAttribute("disabled","");
+        
     
 }
 
@@ -90,17 +91,10 @@ function getRandomArbitrary(min, max) {
 
 function win() {
     console.log("win");
-    /* Message de win */
-    /* btnReset.style.display = "block"; */
     wine.style.display = "block";
-    reset();
 }
-if(arrayBaton.length <= 0){
-    console.log("lose");
-    console.log("lose");
-    /* Message de lose */
-    /* Btn pour reset */
-}
+
+
 
 btnReset.addEventListener("click", function(){
     reset();
@@ -108,8 +102,6 @@ btnReset.addEventListener("click", function(){
 
 function reset() {
     arrayBaton = arrayBatonSave;
-
-    /* btnReset.style.display = "none"; */
 
     btn1.removeAttribute("disabled","");
     btn2.removeAttribute("disabled","");
@@ -141,7 +133,6 @@ window.addEventListener('load', () => {
 
 ul.addEventListener('click', () => {
     wine.style.display = "none";
-    reset();
 })
 
 /* fin de win/antho */
