@@ -108,17 +108,19 @@ body {
   color: whitesmoke;
   z-index: 5;
 }
-.maitre{
+.fort{
   position: absolute;
   z-index: 1;
   margin-bottom: 8%;
-  right: 3%;
-  
+  right: 3%; 
+}
+.maitre{
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  right: 3%; 
+}
 
-}
-.maitre:hover{
-  animation: maitre 0.5s linear 0s infinite normal;
-}
 h2 {
   color: whitesmoke;
   position: absolute;
@@ -397,18 +399,9 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   }
 }
 /* fin de anim tigre */
-/* Anim maitre des jeu*/
 
-@keyframes maitre {
-  0% {
-    transform: rotate(0);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}
-  
+
 /* fin de anim */
 /* flambeau */
 .feu {
