@@ -108,17 +108,19 @@ body {
   color: whitesmoke;
   z-index: 5;
 }
-.maitre{
+.fort{
   position: absolute;
   z-index: 1;
   margin-bottom: 8%;
-  right: 3%;
-  
+  right: 3%; 
+}
+.maitre{
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  right: 3%; 
+}
 
-}
-.maitre:hover{
-  animation: maitre 0.5s linear 0s infinite normal;
-}
 h2 {
   color: whitesmoke;
   position: absolute;
@@ -240,9 +242,11 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   width: 30%;
   height: 10%;
   position: absolute;
+  font-size: 30px;
+  font-family: "Norse";
   top: 85%;
   left: 35%;
-  background-color: rgb(25, 25, 25);
+  background-color: rgba(190, 187, 187, 0.391);
   outline: none;
   border: none;
   border-radius: 10px;
@@ -256,7 +260,7 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   top: 85%;
   left: 68%;
   position: absolute;
-  background-color: rgb(25, 25, 25);
+  background-color: rgba(190, 187, 187, 0.391);
   outline: none;
   border: none;
   border-radius: 10px;
@@ -395,18 +399,9 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   }
 }
 /* fin de anim tigre */
-/* Anim maitre des jeu*/
 
-@keyframes maitre {
-  0% {
-    transform: rotate(0);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}
-  
+
 /* fin de anim */
 /* flambeau */
 .feu {
