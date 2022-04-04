@@ -569,7 +569,6 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   align-items: center;
   flex-direction: column;
 }
-<<<<<<< HEAD
 
 .mute {
   position: absolute;
@@ -623,5 +622,3 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
     transform: scale(0.99);
   }
 }
-=======
->>>>>>> bd4555e0a37a3041e0ac7c161082f795bb22815e
