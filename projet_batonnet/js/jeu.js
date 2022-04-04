@@ -68,24 +68,39 @@ btn3.addEventListener('click', function(){
     btn1.setAttribute("disabled","");
     btn2.setAttribute("disabled","");
     btn3.setAttribute("disabled","");
+
+    console.log(arrayBaton);
 })
 
 /* Ordinateur */
 function ordi() {
-    console.log(arrayBaton);
-        let randomBaton = getRandomArbitrary(0, 3)
-        console.log(randomBaton);
-        
+    let randomBaton = getRandomArbitrary(0, 3);
+    if(arrayBaton.length == 4){
+        for (let i = 0; i < 3; i++) {
+            arrayBaton[0].style.opacity = "0";
+            arrayBaton.splice(0,1);
+            lose();
+        }
+    }else if(arrayBaton.length == 3){
+        for (let i = 0; i < 2; i++) {
+            arrayBaton[0].style.opacity = "0";
+            arrayBaton.splice(0,1);
+            lose();
+        }
+    }else if(arrayBaton.length == 2){
+        arrayBaton[0].style.opacity = "0";
+        arrayBaton.splice(0,1);
+        lose();
+    }else{
         for (let i = 0; i < randomBaton; i++) {
             arrayBaton[0].style.opacity = "0";
             arrayBaton.splice(0,1);
         }
-
-        btn1.removeAttribute("disabled","");
-        btn2.removeAttribute("disabled","");
-        btn3.removeAttribute("disabled","");
-        
+    }
     
+    btn1.removeAttribute("disabled","");
+    btn2.removeAttribute("disabled","");
+    btn3.removeAttribute("disabled","");
 }
 
 
@@ -97,6 +112,10 @@ function getRandomArbitrary(min, max) {
 function win() {
     console.log("win");
     wine.style.display = "block";
+}
+
+function lose() {
+    console.log("lose");
 }
 
 
