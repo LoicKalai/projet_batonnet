@@ -37,9 +37,10 @@
     cursor: pointer;
     display: none;
     justify-content: center;
+    align-items: center;
 }
 .btnReset:hover {
     transition: ease-in .1s;
-    box-shadow: inset 0px 0px 10px 10px black;
+    box-shadow:  0px 0px 5px 5px #C6A586;
     color: whitesmoke;
 }

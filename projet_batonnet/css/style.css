@@ -9,11 +9,16 @@ body {
 @font-face {
   font-family: "Norse";
   src: url("../assets/font/Norse.otf");
+  
+}
+@font-face {
+  font-family: "NorseBold";
+  src: url("../assets/font/Norsebold.otf");
+  
 }
 
 /* block centrale */
 .contain {
-  padding-top: 5vh;
   width: 100%;
   height: 110vh;
   background-color:rgb(25, 25, 25);
@@ -26,6 +31,7 @@ body {
 .jeux {
   width: 100%;
   height: 100%;
+  display: none;
 }
 .acc {
   width: 100%;
@@ -35,6 +41,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  display: none;
 }
 /* fin de trois page */
 
@@ -96,13 +103,22 @@ body {
 .titre {
   position: absolute;
   top: 5vh;
-  left: 40%;
+  left: 43%;
   font-size: 3em;
   color: whitesmoke;
+  z-index: 5;
+}
+.maitre{
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  right: 5%;
+
 }
 h2 {
   color: whitesmoke;
   position: absolute;
+  margin-left: 70px;
   top: 10%;
   left: 40%;
   z-index: 4;
@@ -120,6 +136,8 @@ h2 {
   background: darkgray;
   border-radius: 10px;
   box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
+  display: none;
+  
 }
 .wine ul {
   list-style-type: none;
@@ -139,6 +157,20 @@ h2 {
   margin: .2vh;
   border-radius: 10px;
   transition: ease .2s;
+}
+.wine h3{
+  display: flex;
+  justify-content: center;
+  font-family: "NorseBold";
+  
+}
+h3{
+  font-size: 50px;
+  height: 85%;
+  align-items: center;
+}
+.Prejouer{
+  font-size: 30px;
 }
 .ul:hover .bar1 {
   transform: rotate(60deg);
@@ -218,11 +250,11 @@ h2 {
 /* hover des btn */
 .play:hover {
   transition: ease-in .1s;
-  box-shadow: inset 0px 0px 10px 10px black;
+  box-shadow: inset 0px 0px 10px 10px grey;
 }
 .btnregle:hover {
   transition: ease-in .1s;
-  box-shadow: inset 0px 0px 10px 10px black;
+  box-shadow: inset 0px 0px 10px 10px grey;
 }
 .menu:hover {
   transition: ease-in .1s;
@@ -230,17 +262,17 @@ h2 {
 }
 .menu2:hover {
   transition: ease-in .1s;
-  box-shadow: inset 0px 0px 10px 10px black;
+  box-shadow: inset 0px 0px 10px 10px grey;
 }
 /* fin de hover des btn */
 
 /* anim */
 .anim {
-  animation: 10s linear 5s infinite moving;
+  animation: 5s linear 10s infinite moving;
 }
 /* anim tigre */
 .anim2 {
-  animation: 10s linear 10s infinite moving2;
+  animation: 5s linear 5s infinite moving2;
 }
 
 @keyframes moving {
@@ -396,7 +428,7 @@ h2 {
   list-style-type: none;
   width: 70%;
   height: 70%;
-  background-image: url("../assets/img/table.png");
+  background-image: url("../assets/img/bckground_papier.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: inset 0px 0px 5px 10px rgb(25, 25, 25);
@@ -432,7 +464,7 @@ h2 {
   margin-top: 5%;
   margin-right: 5%;
 }
-/* fin de style à déffinir */
+/* fin de style à définir */
 .btnchoix {
   position: absolute;
   top: 5%;
@@ -453,10 +485,12 @@ h2 {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 .btn:hover {
   transition: ease-in .1s;
-  box-shadow: inset 0px 0px 10px 10px black;
+  box-shadow: inset 0px 0px 5px 5px #C6A586;
   color: whitesmoke;
 }
 
@@ -472,6 +506,7 @@ h2 {
   align-items: center;
   flex-direction: column;
 }
+<<<<<<< HEAD
 
 .mute {
   position: absolute;
@@ -525,3 +560,5 @@ h2 {
     transform: scale(0.99);
   }
 }
+=======
+>>>>>>> bd4555e0a37a3041e0ac7c161082f795bb22815e
