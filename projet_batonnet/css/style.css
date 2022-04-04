@@ -324,11 +324,11 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
 
 /* anim */
 .anim {
-  animation: 5s linear 10s infinite moving;
+  animation: 10s linear 5s infinite moving;
 }
 /* anim tigre */
 .anim2 {
-  animation: 5s linear 5s infinite moving2;
+  animation: 10s linear 10s infinite moving2;
 }
 
 @keyframes moving {
