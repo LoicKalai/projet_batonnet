@@ -1,0 +1,464 @@
+*{
+  margin: 0;
+}
+body {
+  overflow: hidden;
+  font-family: "Norse", sans-serif;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("../assets/font/Norse.otf");
+}
+
+/* block centrale */
+.contain {
+  width: 100%;
+  height: 110vh;
+  background-color:rgb(25, 25, 25);
+  box-shadow: inset 0px 0px 60px 10px black;
+}
+/* fin de block centrale */
+
+/* trois page */
+.jeux {
+  width: 100%;
+  height: 100%;
+}
+.acc {
+  width: 100%;
+  height: 100vh;
+}
+.regles {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+/* fin de trois page */
+
+/* img */
+.back {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.fouras {
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 5vh;
+  left: -20%;
+}
+.fouras2 {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  top: 40vh;
+  left: 70%;
+  z-index: 10;
+}
+.partout {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  top: 10vh;
+  left: -10%;
+}
+.tigre {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  top: 5vh;
+  right: -10%;
+  transform: scaleX(-1);
+}
+.imgflame {
+  position: relative;
+  z-index: 5;
+  width: 5%;
+  height: 5%;
+}
+/* fin de img */
+
+/* titre et h2 */
+.titre {
+  position: absolute;
+  top: 5vh;
+  left: 40%;
+  font-size: 3em;
+  color: whitesmoke;
+}
+h2 {
+  color: whitesmoke;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  z-index: 4;
+}
+/* fin de titre et h2 */
+
+/* div win / loose */
+.wine {
+  position: absolute;
+  z-index: 5;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: darkgray;
+  border-radius: 10px;
+  box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
+}
+.wine ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 85%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+.wine ul li {
+  position: relative;
+  z-index: 6;
+  width: 5vh;
+  height: .5vh;
+  background: black;
+  margin: .2vh;
+  border-radius: 10px;
+  transition: ease .2s;
+}
+.ul:hover .bar1 {
+  transform: rotate(60deg);
+}
+.ul:hover .bar3 {
+  transform: rotate(-60deg);
+}
+.ul:hover .bar2 {
+  opacity: 0;
+}
+/* fin de div win / loose */
+
+/* btn première page*/
+.play {
+  width: 30%;
+  height: 10%;
+  position: absolute;
+  top: 85%;
+  left: 35%;
+  background-color: rgb(25, 25, 25);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+  z-index: 2;
+}
+.btnregle {
+  width: 15%;
+  height: 10%;
+  top: 85%;
+  left: 68%;
+  position: absolute;
+  background-color: rgb(25, 25, 25);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+  z-index: 2;
+}
+/* fin de btn première page */
+
+/* btn retour */
+.menu {
+  position: absolute;
+  z-index: 2;
+  width: 10%;
+  height: 5%;
+  background-color: rgb(25, 25, 25);
+  top: 0;
+  left: 0;
+  margin: 5vh;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.menu2 {
+  position: absolute;
+  z-index: 2;
+  width: 10%;
+  height: 5%;
+  background-color: rgb(25, 25, 25);
+  top: 0;
+  left: 0;
+  margin: 5vh;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+/* fin de btn retour */
+
+/* hover des btn */
+.play:hover {
+  transition: ease-in .1s;
+  box-shadow: inset 0px 0px 10px 10px black;
+}
+.btnregle:hover {
+  transition: ease-in .1s;
+  box-shadow: inset 0px 0px 10px 10px black;
+}
+.menu:hover {
+  transition: ease-in .1s;
+  box-shadow: inset 0px 0px 10px 10px black;
+}
+.menu2:hover {
+  transition: ease-in .1s;
+  box-shadow: inset 0px 0px 10px 10px black;
+}
+/* fin de hover des btn */
+
+/* anim */
+.anim {
+  animation: 10s linear 5s infinite moving;
+}
+/* anim tigre */
+.anim2 {
+  animation: 10s linear 10s infinite moving2;
+}
+
+@keyframes moving {
+  from {
+    
+    left: 100%;
+  }
+  25% {
+    transform: scaleX(0.5);
+    
+    left: -50%;
+  }
+  40% {
+    transform: scaleX(0);
+    
+    left: -100%;
+  }
+  50% {
+    transform: scaleX(-1);
+    
+    left: 0%;
+  }
+  60% {
+    transform: scaleX(-1);
+    
+    left: 100%;
+  }
+  85% {
+    transform: scaleX(0);
+    left: 150%;
+    
+  }
+  to {
+    left: 300%;
+  }
+}
+
+@keyframes moving2 {
+  from {
+    left: -100%;
+  }
+  20% {
+    
+  }
+  30% {
+    left: 100%;
+  }
+  40% {
+    left: 100%;
+  }
+  50% {
+    left: 100%;
+  }
+  60% {
+    left: 100%;
+  }
+  70% {
+    left: 100%;
+  }
+  80% {
+    left: 100%;
+  }
+  90% {
+    left: 100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+/* fin de anim tigre */
+/* fin de anim */
+
+/* flambeau */
+.feu {
+  position: absolute;
+  top: 15vh;
+  left: 5vh;
+  width: 95%;
+  justify-content: space-around;
+}
+.feu ul {
+  list-style-type: none;
+}
+.feu ul li {
+  display: flex;
+  flex-direction: column;
+}
+.flame_container {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  animation: flame 3s 200ms 
+          ease-in infinite alternate;
+}
+.flame {
+  bottom: 0;
+  z-index: 3;
+  position: absolute;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg) scale(1.5, 1.5);
+  cursor: pointer;
+}
+.flame_yellow {
+  left: 15px;
+  width: 30px;
+  height: 20px;
+  background: gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+.flame_orange {
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background: orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+.flame_red {
+  left: 5px;
+  width: 50px;
+  height: 60px;
+  background: OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+.torche {
+  width: 30%;
+  height: 5%;
+  margin-left: 20%;
+}
+
+@keyframes flame {
+  from {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+/* fin de flambeau */
+
+/* design batonnet */
+.batonnet {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+}
+/* style à définnir */
+.batonnet ul {
+  list-style-type: none;
+  width: 70%;
+  height: 70%;
+  background-image: url("../assets/img/table.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 5px 10px rgb(25, 25, 25);
+  margin-top: 8%;
+  margin-left: 13%;
+  display: flex;
+  justify-content: space-around;
+  animation: ease .5s infinite zo;
+}
+@keyframes zo {
+  from {
+    transform: scale(1);
+  }
+  25% {
+
+  }
+  50% {
+    transform: scale(0.999);
+  }
+  75% {
+
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.batonnet > ul > li {
+  background-image: url("../assets/img/baton.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70%;
+  width: 2%;
+  margin-top: 5%;
+  margin-right: 5%;
+}
+/* fin de style à déffinir */
+.btnchoix {
+  position: absolute;
+  top: 5%;
+  width: 74%;
+  height: 10%;
+  margin-left: 13%;
+  display: flex;
+  justify-content: space-around;
+}
+.btn {
+  z-index: 4;
+  width: 10%;
+  height: 50%;
+  background-color: rgb(208, 208, 208);
+  margin: 2%;
+  border-radius: 10px;
+  color: darkslategrey;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.btn:hover {
+  transition: ease-in .1s;
+  box-shadow: inset 0px 0px 10px 10px black;
+  color: whitesmoke;
+}
+
+/* fin de design batonnet */
+
+/* block regle */
+.blockregle{
+  height: 100%;
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

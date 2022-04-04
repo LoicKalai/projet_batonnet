@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon-16x16.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/jeu.css">
+    <title>One stick</title>
+</head>
+<body>
+    <!-- musique -->
+    <audio src="./assets/FortBoyardClub.mp3" loop></audio>
+<!-- 
+    (\/)
+    ( ..)
+    C(")(")
+-->
+    <!-- gros block centrale -->
+    <div class="contain">
+
+        <!-- première page -->
+        <div class="acc">
+
+            <!-- img de fond -->
+            <img class="back" src="./assets/img/back.png" alt="">
+            <!-- fin de img de fond -->
+
+            <h1 class="titre">
+                Le jeux du baton !
+            </h1>
+            
+            <!-- btn  -->
+            <button class="play">Jouez</button>
+            <button class="btnregle">Règles</button>
+            <!-- fin de btn -->
+
+        </div>
+        <!-- fin de première page -->
+
+        <!-- page de jeux -->
+        <div class="jeux">
+
+            <!-- btn retour premirère page -->
+            <button class="menu">Accueil</button>
+            <!-- fin de btn retour première page -->
+
+            <h2>Retirez un / deux / trois bâtons :</h2>
+
+            <!-- animation course poursuite -->
+            <img class="fouras" src="./assets/img/fouras.png" alt="">
+            <img class="partout" src="./assets/img/partout.png" alt="">
+            <img class="tigre" src="./assets/img/tigre.png" alt="">
+            <!-- fin de animation course poursuite -->
+
+            <!-- affichage du jeux -->
+            <div class="batonnet">
+
+                <ul>
+                    <li class="baton1"></li>
+                    <li class="baton2"></li>
+                    <li class="baton3"></li>
+                    <li class="baton4"></li>
+                    <li class="baton5"></li>
+                    <li class="baton6"></li>
+                    <li class="baton7"></li>
+                    <li class="baton8"></li>
+                    <li class="baton9"></li>
+                    <li class="baton10"></li>
+                    <li class="baton11"></li>
+                    <li class="baton12"></li>
+                    <li class="baton13"></li>
+                    <li class="baton14"></li>
+                    <li class="baton15"></li>
+                </ul>
+
+                <div class="btnchoix">
+                    <div class="btn1 btn">1</div>
+                    <div class="btn2 btn">2</div>
+                    <div class="btn3 btn">3</div>
+                </div>
+
+                <div class="btnReset">Reset</div>
+
+            </div>
+            <!-- fin de affichage du jeux -->
+
+            <!-- torche -->
+            <div class="feu">
+
+                <!-- première liste de trois flambeau gauche -->
+                <ul>
+                    <li>
+                        <div class="flame_container">
+                            <div class="flame_red flame"></div>
+                            <div class="flame_orange flame"></div>
+                            <div class="flame_yellow flame"></div>
+                        </div>
+                        <img class="torche" src="./assets/img/torche.png" alt="">
+                    </li>
+                    <li>
+                        <div class="flame_container">
+                            <div class="flame_red flame"></div>
+                            <div class="flame_orange flame"></div>
+                            <div class="flame_yellow flame"></div>
+                        </div>
+                        <img class="torche" src="./assets/img/torche.png" alt="">
+                    </li>
+                    <li>
+                        <div class="flame_container">
+                            <div class="flame_red flame"></div>
+                            <div class="flame_orange flame"></div>
+                            <div class="flame_yellow flame"></div>
+                        </div>
+                        <img class="torche" src="./assets/img/torche.png" alt="">
+                    </li>
+                </ul>
+                <!-- fin de première liste -->
+
+                <!-- deuxième liste droite -->
+                <ul>
+                    <li>
+                        <div class="flame_container">
+                            <div class="flame_red flame"></div>
+                            <div class="flame_orange flame"></div>
+                            <div class="flame_yellow flame"><img class="imgflame" src="./assets/img/flame.png" alt=""></div>
+                        </div>
+                        <img class="torche" src="./assets/img/torche.png" alt="">
+                    </li>
+                    <li>
+                        <div class="flame_container">
+                            <div class="flame_red flame"></div>
+                            <div class="flame_orange flame"></div>
+                            <div class="flame_yellow flame"></div>
+                        </div>
+                        <img class="torche" src="./assets/img/torche.png" alt="">
+                    </li>
+                    <li>
+                        <div class="flame_container">
+                            <div class="flame_red flame"></div>
+                            <div class="flame_orange flame"></div>
+                            <div class="flame_yellow flame"></div>
+                        </div>
+                        <img class="torche" src="./assets/img/torche.png" alt="">
+                    </li>
+                </ul>
+                <!-- fin de deuxième liste -->
+
+            </div>
+            <!-- fin de torche -->
+
+        </div>
+        <!-- fin de page de jeux -->
+
+        <!-- page de règles -->
+        <div class="regles">
+
+            <button class="menu2">Accueil</button>
+
+
+            <div class="blockregle">
+                <p>Chaque joueur enlève au choix 1, 2 ou 3 bâtonnets</p>
+                <p> puis c’est au tour de l’adversaire de retirer 1, 2 ou 3 bâtonnets.</p>
+                <p>Celui qui enlèvera le dernier bâtonnet sera le perdant.</p>
+            </div>
+
+            <img class="fouras2" src="./assets/img/fouras2.png" alt="">
+
+        </div>
+        <!-- fin de page de règle -->
+
+        <!-- wine -->
+        <div class="wine">
+            <ul class="ul">
+                <li class="bar1"></li>
+                <li class="bar2"></li>
+                <li class="bar3"></li>
+            </ul>
+            <h3>Bravo tu as gagné !</h3>
+            <hr>
+        </div>
+        <!-- fin de wine -->
+
+    </div>
+    <!-- fin de gros block centrale -->
+
+    <!-- script animation -->
+    <script src="./js/script.js"></script>
+
+    <!-- script jeu -->
+    <script src="./js/jeu.js"></script>
+</body>
+</html>
