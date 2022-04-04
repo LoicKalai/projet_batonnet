@@ -22,6 +22,11 @@ const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 const btnReset = document.querySelector('.btnReset');
 
+window.addEventListener('load', () => {
+    btnReset.style.display = "block";
+    btnReset.style.display = "flex";
+})
+
 /* Enlever un baton */
 btn1.addEventListener('click', function(){
     arrayBaton[0].style.opacity = "0";
@@ -125,14 +130,12 @@ function reset() {
 }
 
 /* wine/antho */
-let ul = document.querySelector('.ul');
 
-window.addEventListener('load', () => {
-    wine.style.display = "none";
-})
+let ul = document.querySelector('.ul');
 
 ul.addEventListener('click', () => {
     wine.style.display = "none";
+    reset();
 })
 
 /* fin de win/antho */

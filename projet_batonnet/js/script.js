@@ -21,7 +21,7 @@ let tigre = document.querySelector('.tigre');
 
 /* flambeau */
 let feu = document.querySelector('.feu');
-let flame = document.querySelectorAll('.flame_container');
+let flame = document.querySelectorAll('.flame');
 
 /* titre */
 let titre = document.querySelector('.titre');
@@ -155,32 +155,33 @@ function border () {
 /* . . . */
 
 /* animation hover fouras */
-let nbr = 0;
+let nbre = 0;
 fouras2.addEventListener('mouseover', () => {
-  switch (nbr) {
+  
+  switch (nbre) {
     case 0:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "2vh";
       fouras2.style.left = "35%";
-      nbr++;
+      nbre++;
     break;
     case 1:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "40vh";
       fouras2.style.left = "5%";
-      nbr++;
+      nbre++;
     break;
     case 2:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "80vh";
       fouras2.style.left = "35%";
-      nbr++;
+      nbre++;
     break;
     case 3:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "40vh";
       fouras2.style.left = "70%";
-      nbr = 0;
+      nbre = 0;
     break;
   }
 })
@@ -215,9 +216,10 @@ move();
 /* fin de animation course poursuite */
 
 /* . . . */
-/* let nbrbis = 0;
-flame.addEventListener('click', () => {
-  flame.forEach(element => {
+let fl = document.querySelector('.flame');
+let nbrbis = 0;
+flame.addEventListener('click', (e) => {
+  fl.forEach(element => {
     let fire = element;
     switch(nbrbis) {
       case 0:
@@ -230,5 +232,5 @@ flame.addEventListener('click', () => {
       break;
     }
   });
-}) */
+})
 /* . . . */

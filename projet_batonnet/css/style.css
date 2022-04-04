@@ -13,6 +13,7 @@ body {
 
 /* block centrale */
 .contain {
+  padding-top: 5vh;
   width: 100%;
   height: 110vh;
   background-color:rgb(25, 25, 25);
@@ -38,6 +39,10 @@ body {
 
 /* img */
 .back {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 .fouras {
@@ -48,7 +53,7 @@ body {
   left: -20%;
 }
 .fouras2 {
-  position: relative;
+  position: absolute;
   width: 10%;
   height: 20%;
   top: 40vh;
@@ -68,6 +73,13 @@ body {
   height: 20%;
   top: 5vh;
   right: -10%;
+  transform: scaleX(-1);
+}
+.imgflame {
+  position: relative;
+  z-index: 5;
+  width: 5%;
+  height: 5%;
 }
 /* fin de img */
 
@@ -293,12 +305,25 @@ h2 {
 /* fin de anim */
 
 /* flambeau */
+.feu {
+  position: absolute;
+  top: 15vh;
+  left: 5vh;
+  width: 95%;
+  justify-content: space-around;
+}
+.feu ul {
+  list-style-type: none;
+}
+.feu ul li {
+  display: flex;
+  flex-direction: column;
+}
 .flame_container {
-  z-index: 2;
+  position: absolute;
+  z-index: 1;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  animation: flame .7s 200ms 
+  animation: flame 3s 200ms 
           ease-in infinite alternate;
 }
 .flame {
@@ -330,29 +355,21 @@ h2 {
   background: OrangeRed;
   box-shadow: 0px 0px 5px 4px OrangeRed;
 }
-.feu {
-  width: 95%;
-  position: absolute;
-  top: 15vh;
-}
-.feu ul {
-  list-style-type: none;
-}
 .torche {
-  margin-left: 3vh;
-  z-index: 2;
-  background-color: rgb(61, 19, 2);
-  border-radius: 20px;
-  width: 2vh;
-  height: 20vh;
+  width: 30%;
+  height: 5%;
+  margin-left: 20%;
 }
 
 @keyframes flame {
   from {
-    transform: scale(.97);
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.3);
   }
   to {
-    transform: scale(1);
+    transform: scale(1.5);
   }
 }
 /* fin de flambeau */
@@ -370,18 +387,41 @@ h2 {
   list-style-type: none;
   width: 70%;
   height: 70%;
-  background-color: red;
+  background-image: url("../assets/img/table.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 5px 10px rgb(25, 25, 25);
   margin-top: 8%;
   margin-left: 13%;
   display: flex;
   justify-content: space-around;
+  animation: ease .5s infinite zo;
 }
-.batonnet ul li {
-  background-color: magenta;
+@keyframes zo {
+  from {
+    transform: scale(1);
+  }
+  25% {
+
+  }
+  50% {
+    transform: scale(0.999);
+  }
+  75% {
+
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.batonnet > ul > li {
+  background-image: url("../assets/img/baton.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 70%;
-  width: 2vh;
+  width: 2%;
   margin-top: 5%;
-  margin-right: 5vh;
+  margin-right: 5%;
 }
 /* fin de style à déffinir */
 .btnchoix {
@@ -410,25 +450,7 @@ h2 {
   box-shadow: inset 0px 0px 10px 10px black;
   color: whitesmoke;
 }
-.btnReset {
-  position: absolute;
-  z-index: 1;
-  width: 10%;
-  height: 5%;
-  background-color: rgb(208, 208, 208);
-  margin-left: 45%;
-  margin-top: 2%;
-  border-radius: 10px;
-  color: darkslategrey;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-}
-.btnReset:hover {
-  transition: ease-in .1s;
-  box-shadow: inset 0px 0px 10px 10px black;
-  color: whitesmoke;
-}
+
 /* fin de design batonnet */
 
 /* block regle */

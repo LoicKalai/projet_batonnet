@@ -24,6 +24,22 @@
     display: flex;
     justify-content: space-evenly;
 }
-.btnReset{
+.btnReset {
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 5%;
+    background-color: rgb(208, 208, 208);
+    margin-left: 45%;
+    margin-top: 2%;
+    border-radius: 10px;
+    color: darkslategrey;
+    cursor: pointer;
     display: none;
+    justify-content: center;
+}
+.btnReset:hover {
+    transition: ease-in .1s;
+    box-shadow: inset 0px 0px 10px 10px black;
+    color: whitesmoke;
 }
