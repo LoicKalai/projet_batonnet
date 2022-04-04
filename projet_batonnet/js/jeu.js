@@ -116,6 +116,7 @@ function win() {
 
 function lose() {
     console.log("lose");
+    loose.style.display = "block";
 }
 
 
@@ -155,6 +156,16 @@ let ul = document.querySelector('.ul');
 ul.addEventListener('click', () => {
     wine.style.display = "none";
     reset();
+
 })
+
+let ule = document.querySelector('.ule');
+
+ule.addEventListener('click', () => {
+    loose.style.display = "none";
+    reset();
+
+})
+
 
 /* fin de win/antho */
