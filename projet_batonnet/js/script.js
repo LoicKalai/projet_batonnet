@@ -17,11 +17,14 @@ let fouras = document.querySelector('.fouras');
 let back = document.querySelector('.back');
 let fouras2 = document.querySelector('.fouras2');
 let partout = document.querySelector('.partout');
+let partout2 = document.querySelector('.partout2');
 let tigre = document.querySelector('.tigre');
+let tigre2 = document.querySelector('.tigre2');
+
+/*  */
 
 /* flambeau */
 let feu = document.querySelector('.feu');
-let flame = document.querySelectorAll('.flame');
 
 /* titre */
 let titre = document.querySelector('.titre');
@@ -35,6 +38,9 @@ let loose = document.querySelector('.loose');
 /* Musique */
 
 let musique = document.querySelector('audio');
+let mute = document.querySelector('.mute');
+let cercle2 = document.querySelector('.cercle2');
+let cercle3 = document.querySelector('.cercle3');
 
 /* au chargement de la page */
 window.addEventListener('load', () => {
@@ -57,6 +63,8 @@ window.addEventListener('load', () => {
 /* btn jouez */
 btn.addEventListener('click', () => {
 
+  cercle2.classList.add("animes");
+  cercle3.classList.add("animes");
   musique.play();
 
   acc.style.transform = "scale(5)";
@@ -66,6 +74,27 @@ btn.addEventListener('click', () => {
   jeux.style.opacity = "1";
 
   setTimeout(none, 1000);
+})
+
+let nbrmute = 0;
+mute.addEventListener('click', () => {
+
+  switch(nbrmute) {
+    case 0:
+      cercle2.classList.remove("animes");
+      cercle3.classList.remove("animes");
+      mute.classList.add("trait");
+      musique.muted = true;
+      nbrmute++;
+    break;
+    case 1:
+      cercle2.classList.add("animes");
+      cercle3.classList.add("animes");
+      mute.classList.remove("trait");
+      musique.muted = false;
+      nbrmute = 0;
+    break;
+  }
 })
 
 function none() {
@@ -168,25 +197,157 @@ fouras2.addEventListener('mouseover', () => {
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "2vh";
       fouras2.style.left = "35%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "40vh";
+      partout2.style.left = "5%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "80vh";
+      tigre2.style.left = "35%";
       nbre++;
     break;
     case 1:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "40vh";
       fouras2.style.left = "5%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "80vh";
+      partout2.style.left = "35%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "40vh";
+      tigre2.style.left = "70%";
       nbre++;
     break;
     case 2:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "80vh";
       fouras2.style.left = "35%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "40vh";
+      partout2.style.left = "70%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "2vh";
+      tigre2.style.left = "35%";
       nbre++;
     break;
     case 3:
       fouras2.style.transition = "ease-in .2s";
       fouras2.style.top = "40vh";
       fouras2.style.left = "70%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "2vh";
+      partout2.style.left = "35%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "40vh";
+      tigre2.style.left = "5%";
       nbre = 0;
+    break;
+  }
+})
+let nbre1 = 0;
+partout2.addEventListener('mouseover', () => {
+  
+  switch (nbre1) {
+    case 0:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "2vh";
+      fouras2.style.left = "35%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "40vh";
+      partout2.style.left = "5%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "80vh";
+      tigre2.style.left = "35%";
+      nbre1++;
+    break;
+    case 1:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "40vh";
+      fouras2.style.left = "5%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "80vh";
+      partout2.style.left = "35%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "40vh";
+      tigre2.style.left = "70%";
+      nbre1++;
+    break;
+    case 2:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "80vh";
+      fouras2.style.left = "35%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "40vh";
+      partout2.style.left = "70%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "2vh";
+      tigre2.style.left = "35%";
+      nbre1++;
+    break;
+    case 3:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "40vh";
+      fouras2.style.left = "70%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "2vh";
+      partout2.style.left = "35%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "40vh";
+      tigre2.style.left = "5%";
+      nbre1 = 0;
+    break;
+  }
+})
+let nbre2 = 0;
+tigre2.addEventListener('mouseover', () => {
+  
+  switch (nbre2) {
+    case 0:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "2vh";
+      fouras2.style.left = "35%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "40vh";
+      partout2.style.left = "5%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "80vh";
+      tigre2.style.left = "35%";
+      nbre2++;
+    break;
+    case 1:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "40vh";
+      fouras2.style.left = "5%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "80vh";
+      partout2.style.left = "35%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "40vh";
+      tigre2.style.left = "70%";
+      nbre2++;
+    break;
+    case 2:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "80vh";
+      fouras2.style.left = "35%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "40vh";
+      partout2.style.left = "70%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "2vh";
+      tigre2.style.left = "35%";
+      nbre2++;
+    break;
+    case 3:
+      fouras2.style.transition = "ease-in .2s";
+      fouras2.style.top = "40vh";
+      fouras2.style.left = "70%";
+      partout2.style.transition = "ease-in .2s";
+      partout2.style.top = "2vh";
+      partout2.style.left = "35%";
+      tigre2.style.transition = "ease-in .2s";
+      tigre2.style.top = "40vh";
+      tigre2.style.left = "5%";
+      nbre2 = 0;
     break;
   }
 })
@@ -221,11 +382,11 @@ move();
 /* fin de animation course poursuite */
 
 /* . . . */
-let fl = document.querySelector('.flame');
+/* let flame = document.querySelectorAll('.flame');
 let nbrbis = 0;
-flame.addEventListener('click', (e) => {
-  fl.forEach(element => {
-    let fire = element;
+flame.forEach(element => {
+  element.addEventListener('click', (element) => {
+    let fire = this.element;
     switch(nbrbis) {
       case 0:
         fire.style.opacity = "0";
@@ -236,6 +397,6 @@ flame.addEventListener('click', (e) => {
         nbrbis = 0;
       break;
     }
-  });
-})
+  })
+}); */
 /* . . . */
