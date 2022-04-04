@@ -112,13 +112,15 @@ body {
   position: absolute;
   z-index: 1;
   margin-bottom: 8%;
-  right: 3%; 
+  right: 3%;
+  width: 25%;
 }
 .maitre{
   position: absolute;
   z-index: 1;
   top: 3%;
-  right: 3%; 
+  right: 3%;
+  width: 10%; 
 }
 
 h2 {
@@ -457,7 +459,7 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
 .torche {
   width: 30%;
   height: 5%;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 
 @keyframes flame {
