@@ -112,15 +112,25 @@ body {
   position: absolute;
   z-index: 1;
   margin-bottom: 8%;
+<<<<<<< HEAD
   right: 3%;
   width: 25%;
+=======
+  right: 3%; 
+  animation:  10s linear 0.5s infinite normal fort ;
+>>>>>>> d3d3fa39b85da253479eddaf22da6c4967e20c83
 }
 .maitre{
   position: absolute;
   z-index: 1;
   top: 3%;
+<<<<<<< HEAD
   right: 3%;
   width: 10%; 
+=======
+  right: 3%; 
+  transform:scaleX(-1);
+>>>>>>> d3d3fa39b85da253479eddaf22da6c4967e20c83
 }
 
 h2 {
@@ -402,8 +412,35 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
 }
 /* fin de anim tigre */
 
+/* Animation du fort*/
+@keyframes fort {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
 
+  25% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
 
+  50% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  75% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+  
+}
 /* fin de anim */
 /* flambeau */
 .feu {
