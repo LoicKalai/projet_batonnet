@@ -68,8 +68,6 @@ btn3.addEventListener('click', function(){
     btn1.setAttribute("disabled","");
     btn2.setAttribute("disabled","");
     btn3.setAttribute("disabled","");
-
-    console.log(arrayBaton);
 })
 
 /* Ordinateur */
@@ -79,18 +77,18 @@ function ordi() {
         for (let i = 0; i < 3; i++) {
             arrayBaton[0].style.opacity = "0";
             arrayBaton.splice(0,1);
-            lose();
+            window.setTimeout(lose, 1000)
         }
     }else if(arrayBaton.length == 3){
         for (let i = 0; i < 2; i++) {
             arrayBaton[0].style.opacity = "0";
             arrayBaton.splice(0,1);
-            lose();
+            window.setTimeout(lose, 1000)
         }
     }else if(arrayBaton.length == 2){
         arrayBaton[0].style.opacity = "0";
         arrayBaton.splice(0,1);
-        lose();
+        window.setTimeout(lose, 1000)
     }else{
         for (let i = 0; i < randomBaton; i++) {
             arrayBaton[0].style.opacity = "0";
@@ -110,12 +108,10 @@ function getRandomArbitrary(min, max) {
 }
 
 function win() {
-    console.log("win");
     wine.style.display = "block";
 }
 
 function lose() {
-    console.log("lose");
     loose.style.display = "block";
 }
 
