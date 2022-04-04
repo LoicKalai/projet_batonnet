@@ -83,14 +83,12 @@ mute.addEventListener('click', () => {
     case 0:
       cercle2.classList.remove("animes");
       cercle3.classList.remove("animes");
-      mute.classList.add("trait");
       musique.muted = true;
       nbrmute++;
     break;
     case 1:
       cercle2.classList.add("animes");
       cercle3.classList.add("animes");
-      mute.classList.remove("trait");
       musique.muted = false;
       nbrmute = 0;
     break;
