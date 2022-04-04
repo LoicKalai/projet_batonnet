@@ -111,9 +111,13 @@ body {
 .maitre{
   position: absolute;
   z-index: 1;
-  top: 5%;
-  right: 5%;
+  margin-bottom: 8%;
+  right: 3%;
+  
 
+}
+.maitre:hover{
+  animation: maitre 0.5s linear 0s infinite normal;
 }
 h2 {
   color: whitesmoke;
@@ -181,9 +185,57 @@ h3{
 .ul:hover .bar2 {
   opacity: 0;
 }
+.ule:hover .bar1 {
+  transform: rotate(60deg);
+}
+.ule:hover .bar3 {
+  transform: rotate(-60deg);
+}
+.ule:hover .bar2 {
+  opacity: 0;
+}
 /* fin de div win / loose */
-
+/* Div Loose*/
+.loose{
+position: absolute;
+z-index: 5;
+top: 25%;
+left: 25%;
+width: 50%;
+height: 50%;
+background: darkgray;
+border-radius: 10px;
+box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
+/* display: none; */
+}
+.loose h3{
+  display: flex;
+  justify-content: center;
+  font-family: "NorseBold";
 /* btn première page*/
+}
+.loose ul li {
+  position: relative;
+  z-index: 6;
+  width: 5vh;
+  height: .5vh;
+  background: black;
+  margin: .2vh;
+  border-radius: 10px;
+  transition: ease .2s;
+}
+.loose ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 85%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+.perdu{
+  height: 75%;
+}
 .play {
   width: 30%;
   height: 10%;
@@ -343,8 +395,19 @@ h3{
   }
 }
 /* fin de anim tigre */
-/* fin de anim */
+/* Anim maitre des jeu*/
 
+@keyframes maitre {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+/* fin de anim */
 /* flambeau */
 .feu {
   position: absolute;

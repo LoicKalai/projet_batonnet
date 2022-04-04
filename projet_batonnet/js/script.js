@@ -32,7 +32,11 @@ let titre = document.querySelector('.titre');
 /* win */
 let wine = document.querySelector('.wine');
 
+/* loose*/
+let loose = document.querySelector('.loose');
+
 /* Musique */
+
 let musique = document.querySelector('audio');
 let mute = document.querySelector('.mute');
 let cercle2 = document.querySelector('.cercle2');
@@ -52,6 +56,7 @@ window.addEventListener('load', () => {
 
   wine.style.display = "none";
 
+  loose.style.display = "none";
   /* border(); */ //test . . . (1)
 })
 
