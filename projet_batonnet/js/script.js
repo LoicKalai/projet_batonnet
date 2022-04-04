@@ -204,7 +204,7 @@ function tigremove() {
 
 function move() {
 
-  setTimeout(fourasmove, 2500);
+  setTimeout(fourasmove, 3000);
 
   setTimeout(partoutmove, 1000);
 
