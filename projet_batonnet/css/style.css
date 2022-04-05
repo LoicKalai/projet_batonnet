@@ -112,25 +112,18 @@ body {
   position: absolute;
   z-index: 1;
   margin-bottom: 8%;
-<<<<<<< HEAD
-  right: 3%;
   width: 25%;
-=======
   right: 3%; 
   animation:  10s linear 0.5s infinite normal fort ;
->>>>>>> d3d3fa39b85da253479eddaf22da6c4967e20c83
 }
 .maitre{
   position: absolute;
   z-index: 1;
   top: 3%;
-<<<<<<< HEAD
   right: 3%;
   width: 10%; 
-=======
-  right: 3%; 
   transform:scaleX(-1);
->>>>>>> d3d3fa39b85da253479eddaf22da6c4967e20c83
+
 }
 
 h2 {
@@ -151,7 +144,9 @@ h2 {
   left: 25%;
   width: 50%;
   height: 50%;
-  background: darkgray;
+  background-image: url("../assets/img/salle_jeu.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 10px;
   box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   display: none;
@@ -171,7 +166,7 @@ h2 {
   z-index: 6;
   width: 5vh;
   height: .5vh;
-  background: black;
+  background: grey;
   margin: .2vh;
   border-radius: 10px;
   transition: ease .2s;
@@ -180,6 +175,7 @@ h2 {
   display: flex;
   justify-content: center;
   font-family: "NorseBold";
+  color: grey;
   
 }
 h3{
@@ -189,6 +185,8 @@ h3{
 }
 .Prejouer{
   font-size: 30px;
+  color: grey;
+  
 }
 .ul:hover .bar1 {
   transform: rotate(60deg);
@@ -208,6 +206,8 @@ h3{
 .ule:hover .bar2 {
   opacity: 0;
 }
+
+
 /* fin de div win / loose */
 /* Div Loose*/
 .loose{
@@ -217,7 +217,9 @@ top: 25%;
 left: 25%;
 width: 50%;
 height: 50%;
-background: darkgray;
+background-image: url("../assets/img/salle_jeu.svg");
+background-size: cover;
+background-repeat: no-repeat;
 border-radius: 10px;
 box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
 /* display: none; */
@@ -233,7 +235,7 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
   z-index: 6;
   width: 5vh;
   height: .5vh;
-  background: black;
+  background: rgb(143, 140, 140);
   margin: .2vh;
   border-radius: 10px;
   transition: ease .2s;
@@ -249,6 +251,8 @@ box-shadow: 0px 0px 200px 300px rgb(208, 208, 208, 0.3);
 }
 .perdu{
   height: 75%;
+  color: grey;
+
 }
 .play {
   width: 30%;
