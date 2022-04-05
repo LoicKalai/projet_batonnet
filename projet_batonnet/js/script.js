@@ -20,6 +20,7 @@ let partout = document.querySelector('.partout');
 let partout2 = document.querySelector('.partout2');
 let tigre = document.querySelector('.tigre');
 let tigre2 = document.querySelector('.tigre2');
+let maitre2 = document.querySelector('.maitre2');
 
 /*  */
 
@@ -201,6 +202,7 @@ fouras2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "80vh";
       tigre2.style.left = "35%";
+      
       nbre++;
     break;
     case 1:
@@ -213,6 +215,7 @@ fouras2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "40vh";
       tigre2.style.left = "70%";
+      
       nbre++;
     break;
     case 2:
@@ -225,6 +228,7 @@ fouras2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "2vh";
       tigre2.style.left = "35%";
+      
       nbre++;
     break;
     case 3:
@@ -237,10 +241,12 @@ fouras2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "40vh";
       tigre2.style.left = "5%";
+      
       nbre = 0;
     break;
   }
 })
+
 let nbre1 = 0;
 partout2.addEventListener('mouseover', () => {
   
@@ -255,6 +261,7 @@ partout2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "80vh";
       tigre2.style.left = "35%";
+      
       nbre1++;
     break;
     case 1:
@@ -267,6 +274,7 @@ partout2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "40vh";
       tigre2.style.left = "70%";
+      
       nbre1++;
     break;
     case 2:
@@ -279,6 +287,7 @@ partout2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "2vh";
       tigre2.style.left = "35%";
+      
       nbre1++;
     break;
     case 3:
@@ -291,10 +300,12 @@ partout2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "40vh";
       tigre2.style.left = "5%";
+      
       nbre1 = 0;
     break;
   }
 })
+
 let nbre2 = 0;
 tigre2.addEventListener('mouseover', () => {
   
@@ -309,6 +320,7 @@ tigre2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "80vh";
       tigre2.style.left = "35%";
+      
       nbre2++;
     break;
     case 1:
@@ -321,6 +333,7 @@ tigre2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "40vh";
       tigre2.style.left = "70%";
+      
       nbre2++;
     break;
     case 2:
@@ -333,6 +346,7 @@ tigre2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "2vh";
       tigre2.style.left = "35%";
+      
       nbre2++;
     break;
     case 3:
@@ -345,6 +359,7 @@ tigre2.addEventListener('mouseover', () => {
       tigre2.style.transition = "ease-in .2s";
       tigre2.style.top = "40vh";
       tigre2.style.left = "5%";
+      
       nbre2 = 0;
     break;
   }

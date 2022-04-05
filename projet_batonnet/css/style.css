@@ -112,26 +112,21 @@ body {
   position: absolute;
   z-index: 1;
   margin-bottom: 8%;
-<<<<<<< HEAD
   right: 3%;
   width: 25%;
-=======
-  right: 3%; 
-  animation:  10s linear 0.5s infinite normal fort ;
->>>>>>> d3d3fa39b85da253479eddaf22da6c4967e20c83
+  animation:  10s linear 0.5s infinite normal fort;
 }
 .maitre{
   position: absolute;
   z-index: 1;
   top: 3%;
-<<<<<<< HEAD
   right: 3%;
-  width: 10%; 
-=======
-  right: 3%; 
+  width: 10%;
   transform:scaleX(-1);
->>>>>>> d3d3fa39b85da253479eddaf22da6c4967e20c83
+  cursor: pointer;
+  transition: ease-in 1s;
 }
+
 
 h2 {
   color: whitesmoke;
@@ -180,7 +175,7 @@ h2 {
   display: flex;
   justify-content: center;
   font-family: "NorseBold";
-  
+  text-shadow: 0px 0px 10px 10px whitesmoke;
 }
 h3{
   font-size: 50px;
