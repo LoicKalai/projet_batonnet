@@ -2,7 +2,7 @@
 Célèbre jeu du bâtonnet, le dernier à tirer le bâton restant sera perdant!
 
 ## Projet de groupe
-Ce projet est réalisé par un groupe de trois personnes
+Ce projet est réalisé par un groupe de trois personnes dans le cadre de notre formation de développeur, un projet qui se base plutôt sur le côté humoristique que sérieux!
 
 ## Nos github
 https://github.com/anthonyr-14051997  
